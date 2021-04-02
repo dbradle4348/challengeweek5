@@ -1,6 +1,8 @@
 // current date and time
-$(document).ready(function () {
-    $("#currentDay").text(moment().formatmoment().format('MMMM Do YYYY'));
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getDate();
+
+jQuery(function() {
     $("saveBtn").on("click", function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
